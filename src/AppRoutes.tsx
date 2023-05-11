@@ -1,8 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 import { Home } from "./pages/Home";
-import { SignUp } from "./pages/SignUp";
-import { SignIn } from "./pages/SignIn";
+import { SignInSignUp } from "./pages/SignInSignUp";
 
 import { Container, Hero } from "./App.ts";
 import { Private } from "./components/Private/index.tsx";
@@ -12,8 +11,8 @@ export function AppRoutes() {
     <Container>
       <Hero>
         <Routes>
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/sign-in" element={<SignInSignUp />} />
+          <Route path="/sign-up" element={<SignInSignUp />} />
           <Route
             path="/"
             element={
@@ -22,7 +21,7 @@ export function AppRoutes() {
               </Private>
             }
           />
-          <Route path="*" element={<SignIn />} />
+          <Route path="*" element={<SignInSignUp />} />
         </Routes>
       </Hero>
     </Container>

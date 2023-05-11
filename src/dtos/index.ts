@@ -38,3 +38,16 @@ export interface IConfig {
   data?: IUserCredentials | IUserInfo | IAddress | ICompany;
   queryString?: string;
 }
+
+export interface IInitialState {
+  error: boolean;
+  errorMessage: string;
+  isLoading: boolean;
+  data?: IUserInfo | IAddress | ICompany;
+}
+
+export interface IAction {
+  type: string;
+  payload?: IUserInfo | IAddress | ICompany;
+  errorMessage?: string;
+}
